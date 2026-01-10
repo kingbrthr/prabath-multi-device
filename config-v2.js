@@ -1,6 +1,6 @@
 const DATABASE = "postgresql://postgres.almmnrtabgullssuqqwf:misterpemi_12@aws-1-ap-northeast-1.pooler.supabase.com:6543/postgres" // මෙතනට mongodb,mysql,postgresql or github token එකක් enter කරන්න මේ "" දෙක මැදට. (Enter a mongodb,mysql,postgresql or github token here between these two "".)
 const BOT_NUMBER = "94719112088" // ඔයාගෙ whatsapp number එක. (your whatsapp number)
-const SESSION_ID = "PRABATH-MD~UC2tU0qjyHqU8iY" // ඔයාගෙ session id එක මේකෙන් ගන්න - https://prabathmd-official.vercel.app
+const SESSION_ID = "PRABATH-MD~l8LOvgHVkJChIlP" // ඔයාගෙ session id එක මේකෙන් ගන්න - https://prabathmd-official.vercel.app
 
 
 // ඉහත ඒව "" මැදට එකතු කරන්න වෙනත් කිසිම දෙයක් වෙනස් නොකරන්න ❌. (Add "" in the middle of the above and ❌ don't change anything else.)

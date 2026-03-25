@@ -35,8 +35,7 @@ const BOT_NUMBER = process.env.BOT_NUMBER || envv2.BOT_NUMBER;
 const SESSION_ID = process.env.SESSION_ID || envv2.SESSION_ID;
 
 export default {
-    SESSION_ID, 'PRABATH-MD~IFVy0BAxxJa44ne',
-    BOT_NUMBER, '32467410178',
-    GITHUB_USERNAME: 'kingbrthr',
-    GITHUB_AUTH_TOKEN: 'postgres://koyeb-adm:npg_z1fDlsGoXQP7@ep-orange-violet-a1p2ny7k.ap-southeast-1.pg.koyeb.app/koyebdb',
-};
+    SESSION_ID,
+    BOT_NUMBER, 
+    GITHUB_USERNAME:
+    GITHUB_AUTH_TOKEN:

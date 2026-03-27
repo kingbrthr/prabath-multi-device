@@ -2,12 +2,15 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
-  workflow_dispatch:
-  schedule:
-    - cron: "0 16 * * *"
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -16,11 +19,6 @@ jobs:
     strategy:
       matrix:
         node-version: [20.x]
-
-    env:
-      SESSION_ID: PRABATH-MD~IFVy0BAxxJa44ne
-      GITHUB_AUTH_TOKEN: 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
-      BOT_NUMBER: 32467410178
 
     steps:
       - name: Checkout repository
@@ -31,8 +29,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install dependencies
-        run: npm install
+      - name: Clean dependencies and install specific versions
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install cheerio@1.0.0-rc.12 css-select@5.1.0 --legacy-peer-deps
+
+      - name: Install remaining dependencies
+        run: npm install --legacy-peer-deps
 
       - name: Start application
         run: npm start
